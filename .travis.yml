@@ -1,0 +1,10 @@
+language: java
+jdk:
+   - oraclejdk9
+addons:
+   sonarcloud:
+      organization: "begriffi18-github"
+      token:
+         secure: b921b52f7bdf7d97ae5fd31e4bf9118305977c9f
+script:
+   mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
